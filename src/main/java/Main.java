@@ -7,7 +7,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("На скольких человек необходимо разделить счет?");
         int numberOfPersons = 0;
-        while (true) {                                                    // Цикл для ввода кол-ва человек на котор
+        while (true) {                                                                   // Цикл для ввода кол-ва человек и вызов метода для рассчета суммы на человека
             if (!scanner.hasNextInt()) {
                 System.out.println("Необходимо ввести количество людей");
                 scanner.next();

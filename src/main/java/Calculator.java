@@ -2,17 +2,17 @@ import java.util.Scanner;
 
 public class Calculator {
 
-    public void product(int numberOfPersons) {
+    public void product(int numberOfPersons) {                                    // Метод для добовления товара и цены
         double sum = 0;
         double productPrice;
         String productName;
-        String productsList = "Список товаров :";
+        StringBuilder productsList = new StringBuilder("Список товаров :");
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
             System.out.println("Чтобы завершить добовление товаров на пишите Заверишть\nВведите название товара :");
             productName = scanner.next();
-            if (productName.equalsIgnoreCase("Завершить")) {
+            if (productName.equalsIgnoreCase("Завершить")) {          // Для того, что бы заверишть добавление товаров необходимо написать "Заверишть"
                 break;
             }
             System.out.println("Введите стоиомсть товара :");
@@ -24,7 +24,7 @@ public class Calculator {
                 if (productPrice < 0) {
                     System.out.println("Введите положительное число");
                 } else {
-                    productsList += "\n" + productName + " стоимостью " + productPrice + "р";
+                    productsList.append("\n").append(productName).append(" стоимостью ").append(productPrice).append("р");
                     System.out.println(productsList);
                     sum += productPrice;
                     System.out.println("Товар успешно добавлен");
@@ -35,6 +35,6 @@ public class Calculator {
         System.out.println("Общая сумма товаров = " + sum);
         sum /= numberOfPersons;
         Formatter formatter = new Formatter();
-        formatter.reform(sum);
+        formatter.reform(sum);                                                // Вызываем метод, который склоняет падеж
     }
 }
