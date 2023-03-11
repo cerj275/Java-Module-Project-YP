@@ -1,5 +1,5 @@
 public class Formatter {
-    public void reform(double sum) {                                                       // Метод для скланения падежа
+    public void reform(double sum) {                                                       // Метод для склонения падежа
 
         String caseOfRub = "";
         double rem10 = sum % 10;
@@ -18,7 +18,7 @@ public class Formatter {
         result(sum, caseOfRub);
     }
 
-    public void result(double sum, String caseOfRub) {                                   // Метод для вывода рассчета
+    public void result(double sum, String caseOfRub) {                                   // Метод для вывода расчета
         String result = String.format("%.2f", sum);
         System.out.println("Сумма с каждого  человека = " + result + " " + caseOfRub);
     }

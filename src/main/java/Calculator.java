@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Calculator {
 
-    public void product(int numberOfPersons) {                                    // Метод для добовления товара и цены
+    public void product(int numberOfPersons) {                                    // Метод для добавления товара и цены
         double sum = 0;
         double productPrice;
         String productName;
@@ -10,12 +10,12 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Чтобы завершить добовление товаров на пишите Заверишть\nВведите название товара :");
+            System.out.println("Чтобы завершить добавление товаров на пишите Завершить\nВведите название товара :");
             productName = scanner.next();
-            if (productName.equalsIgnoreCase("Завершить")) {          // Для того, что бы заверишть добавление товаров необходимо написать "Заверишть"
+            if (productName.equalsIgnoreCase("Завершить")) {          // Для того, что бы завершить добавление товаров необходимо написать "Завершить"
                 break;
             }
-            System.out.println("Введите стоиомсть товара :");
+            System.out.println("Введите стоимость товара :");
             if (!scanner.hasNextDouble()) {
                 System.out.println("Необходимо ввести стоимость товара");
                 scanner.next();
